@@ -1,8 +1,13 @@
 package com.example.artspace.ui.composables
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
@@ -12,6 +17,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.unit.dp
 import com.example.artspace.R
 
 @Composable
@@ -88,10 +94,44 @@ fun ArtSpace(modifier: Modifier = Modifier) {
     }
 
     Column(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.SpaceAround
     ) {
+        Spacer(modifier = Modifier.height(60.dp))
 
+        ImageBox(
+            painter = imageList[indexStateVariable],
+            imageDescription = descriptionList[indexStateVariable],
+            modifier = Modifier
+                .fillMaxWidth()
+        )
+
+        Spacer(modifier = Modifier.height(50.dp))
+
+        ArtworkColumn(
+            artworkTitle = titleNameList[indexStateVariable],
+            artistName = artistNameList[indexStateVariable],
+            date = dateList[indexStateVariable],
+            modifier = Modifier.padding(vertical = 16.dp)
+        )
+
+
+        ButtonRow(
+            onNextClickValue = {
+                indexStateVariable = (indexStateVariable + 1) % imageList.size
+            },
+            onPreviousClickValue = {
+                indexStateVariable = if (indexStateVariable > 0) {
+                    indexStateVariable - 1
+                } else {
+                    imageList.size - 1
+                }
+            }
+        )
+
+        Spacer(modifier = Modifier.height(16.dp))
     }
 }
