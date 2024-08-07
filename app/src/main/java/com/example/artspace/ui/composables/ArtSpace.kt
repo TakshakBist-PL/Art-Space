@@ -1,6 +1,5 @@
 package com.example.artspace.ui.composables
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -94,7 +93,7 @@ fun ArtSpace(modifier: Modifier = Modifier) {
     }
 
     Column(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxSize()
             .padding(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
