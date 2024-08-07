@@ -1,43 +1,54 @@
 <resources>
     <string name="app_name">ArtSpace</string>
-    <string name="artist_bridge">Arturo Bridgewater</string>
-    <string name="artist_city">Cecilia Urban</string>
-    <string name="artist_deer">Derek Hart</string>
-    <string name="artist_fog">Fiona Mist</string>
-    <string name="artist_forest">Fern Greenwood</string>
-    <string name="artist_harbour">Harold Dockside</string>
-    <string name="artist_jungle">Jasmine Wilde</string>
-    <string name="artist_library">Lydia Page</string>
-    <string name="artist_skyscraper">Skylar Heights</string>
-    <string name="artist_windows">Winston Pane</string>
-    <string name="title_bridge">Bridging Horizons</string>
-    <string name="title_city">City Days</string>
-    <string name="title_deer">Graceful Encounter</string>
-    <string name="title_fog">Veil of Mist</string>
-    <string name="title_forest">Whispering Woods</string>
-    <string name="title_harbour">Safe Haven</string>
-    <string name="title_jungle">Untamed Wilderness</string>
-    <string name="title_library">Knowledge Sanctuary</string>
-    <string name="title_skyscraper">Reaching for the Sky</string>
-    <string name="title_windows">Windows to the Soul</string>
-    <string name="date_bridge">2003</string>
-    <string name="date_city">2008</string>
-    <string name="date_deer">2010</string>
-    <string name="date_fog">2004</string>
-    <string name="date_forest">2006</string>
-    <string name="date_harbour">2012</string>
-    <string name="date_jungle">2015</string>
-    <string name="date_library">2007</string>
-    <string name="date_skyscraper">2018</string>
-    <string name="date_windows">2011</string>
-    <string name="description_bridge">Bridge - An architectural marvel spanning over the water, constructed in 2003.</string>
-    <string name="description_city">City - A bustling metropolis with towering skyscrapers and vibrant culture, established in 2008.</string>
-    <string name="description_deer">Deer - A graceful creature often seen grazing in meadows and forests, captured in 2010.</string>
-    <string name="description_fog">Fog - A mysterious and ethereal weather phenomenon that blankets landscapes, observed in 2004.</string>
-    <string name="description_forest">Forest - A dense woodland filled with diverse flora and fauna, explored in 2006.</string>
-    <string name="description_harbour">Harbour - A safe haven for ships and boats, providing shelter and trade opportunities, developed in 2012.</string>
-    <string name="description_jungle">Jungle - A wild and untamed wilderness teeming with life, ventured into in 2015.</string>
-    <string name="description_library">Library - A sanctuary of knowledge and learning, housing countless books and resources, founded in 2007.</string>
-    <string name="description_skyscraper">Skyscraper - A towering structure that reaches towards the sky, symbolizing modern architectural achievements, built in 2018.</string>
-    <string name="description_windows">Windows - A glimpse into different worlds and perspectives, offering both views and light, installed in 2011.</string>
+    <string-array name="artist_names">
+        <item>Arturo Bridgewater</item>
+        <item>Cecilia Urban</item>
+        <item>Derek Hart</item>
+        <item>Fiona Mist</item>
+        <item>Fern Greenwood</item>
+        <item>Harold Dockside</item>
+        <item>Jasmine Wilde</item>
+        <item>Lydia Page</item>
+        <item>Skylar Heights</item>
+        <item>Winston Pane</item>
+    </string-array>
+
+    <string-array name="title_names">
+        <item>Bridging Horizons</item>
+        <item>City Lights</item>
+        <item>Graceful Encounter</item>
+        <item>Veil of Mist</item>
+        <item>Whispering Woods</item>
+        <item>Safe Haven</item>
+        <item>Untamed Wilderness</item>
+        <item>Knowledge Sanctuary</item>
+        <item>Reaching for the Sky</item>
+        <item>Windows to the Soul</item>
+    </string-array>
+
+    <string-array name="dates">
+        <item>2003</item>
+        <item>2008</item>
+        <item>2010</item>
+        <item>2004</item>
+        <item>2006</item>
+        <item>2012</item>
+        <item>2015</item>
+        <item>2007</item>
+        <item>2018</item>
+        <item>2011</item>
+    </string-array>
+
+    <string-array name="descriptions">
+        <item>Bridge - An architectural marvel spanning over the water, constructed in 2003.</item>
+        <item>City - A bustling metropolis with towering skyscrapers and vibrant culture, established in 2008.</item>
+        <item>Deer - A graceful creature often seen grazing in meadows and forests, captured in 2010.</item>
+        <item>Fog - A mysterious and ethereal weather phenomenon that blankets landscapes, observed in 2004.</item>
+        <item>Forest - A dense woodland filled with diverse flora and fauna, explored in 2006.</item>
+        <item>Harbour - A safe haven for ships and boats, providing shelter and trade opportunities, developed in 2012.</item>
+        <item>Jungle - A wild and untamed wilderness teeming with life, ventured into in 2015.</item>
+        <item>Library - A sanctuary of knowledge and learning, housing countless books and resources, founded in 2007.</item>
+        <item>Skyscraper - A towering structure that reaches towards the sky, symbolizing modern architectural achievements, built in 2018.</item>
+        <item>Windows - A glimpse into different worlds and perspectives, offering both views and light, installed in 2011.</item>
+    </string-array>
 </resources>

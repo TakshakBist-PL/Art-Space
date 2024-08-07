@@ -6,7 +6,6 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
@@ -25,12 +24,11 @@ fun ImageBox(
     modifier: Modifier = Modifier) {
     Box(
         modifier = modifier
-            .shadow(8.dp, shape = RoundedCornerShape(4.dp)) // Shadow for elevation effect
-            .border(1.dp, Color.White, shape = RoundedCornerShape(4.dp)) // Border around the frame
-            .background(Color.White, shape = RoundedCornerShape(4.dp)) // Background color for the frame
-            .padding(40.dp) // Padding inside the frame
-            .fillMaxWidth()
-            .aspectRatio(0.75f), // Aspect ratio for more height than width
+            .shadow(8.dp, shape = RoundedCornerShape(4.dp))
+            .border(1.dp, Color.White, shape = RoundedCornerShape(4.dp))
+            .background(Color.White, shape = RoundedCornerShape(4.dp))
+            .padding(40.dp)
+            .aspectRatio(0.75f),
         contentAlignment = Alignment.Center
     ){
         Image(

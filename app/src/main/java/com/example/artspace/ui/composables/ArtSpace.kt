@@ -7,6 +7,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
@@ -15,65 +17,17 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.res.stringArrayResource
 import androidx.compose.ui.unit.dp
 import com.example.artspace.R
 
 @Composable
 fun ArtSpace(modifier: Modifier = Modifier) {
 
-    val artistNameList = listOf(
-        stringResource(id = R.string.artist_bridge),
-        stringResource(id = R.string.artist_city),
-        stringResource(id = R.string.artist_deer),
-        stringResource(id = R.string.artist_fog),
-        stringResource(id = R.string.artist_forest),
-        stringResource(id = R.string.artist_harbour),
-        stringResource(id = R.string.artist_jungle),
-        stringResource(id = R.string.artist_library),
-        stringResource(id = R.string.artist_skyscraper),
-        stringResource(id = R.string.artist_windows)
-    ).toTypedArray()
-
-    val titleNameList = listOf(
-        stringResource(id = R.string.title_bridge),
-        stringResource(id = R.string.title_city),
-        stringResource(id = R.string.title_deer),
-        stringResource(id = R.string.title_fog),
-        stringResource(id = R.string.title_forest),
-        stringResource(id = R.string.title_harbour),
-        stringResource(id = R.string.title_jungle),
-        stringResource(id = R.string.title_library),
-        stringResource(id = R.string.title_skyscraper),
-        stringResource(id = R.string.title_windows)
-    ).toTypedArray()
-
-    val dateList = listOf(
-        stringResource(id = R.string.date_bridge),
-        stringResource(id = R.string.date_city),
-        stringResource(id = R.string.date_deer),
-        stringResource(id = R.string.date_fog),
-        stringResource(id = R.string.date_forest),
-        stringResource(id = R.string.date_harbour),
-        stringResource(id = R.string.date_jungle),
-        stringResource(id = R.string.date_library),
-        stringResource(id = R.string.date_skyscraper),
-        stringResource(id = R.string.date_windows)
-    ).toTypedArray()
-
-    val descriptionList = listOf(
-        stringResource(id = R.string.description_bridge),
-        stringResource(id = R.string.description_city),
-        stringResource(id = R.string.description_deer),
-        stringResource(id = R.string.description_fog),
-        stringResource(id = R.string.description_forest),
-        stringResource(id = R.string.description_harbour),
-        stringResource(id = R.string.description_jungle),
-        stringResource(id = R.string.description_library),
-        stringResource(id = R.string.description_skyscraper),
-        stringResource(id = R.string.description_windows)
-    ).toTypedArray()
-
+    val artistNameList = stringArrayResource(id = R.array.artist_names)
+    val titleNameList = stringArrayResource(id = R.array.title_names)
+    val dateList = stringArrayResource(id = R.array.dates)
+    val descriptionList = stringArrayResource(id = R.array.descriptions)
 
     val imageList = listOf(
         painterResource(id = R.drawable.bridge),
@@ -95,7 +49,8 @@ fun ArtSpace(modifier: Modifier = Modifier) {
     Column(
         modifier = modifier
             .fillMaxSize()
-            .padding(16.dp),
+            .padding(16.dp)
+            .verticalScroll(rememberScrollState()),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.SpaceAround
     ) {
