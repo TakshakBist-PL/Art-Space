@@ -16,31 +16,25 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringArrayResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.example.artspace.R
+import com.example.artspace.data.DataSource
 
 @Composable
 fun ArtSpace(modifier: Modifier = Modifier) {
 
-    val artistNameList = stringArrayResource(id = R.array.artist_names)
-    val titleNameList = stringArrayResource(id = R.array.title_names)
-    val dateList = stringArrayResource(id = R.array.dates)
-    val descriptionList = stringArrayResource(id = R.array.descriptions)
+    val artworkModelList = DataSource.getArtworkModel()
 
-    val imageList = listOf(
-        painterResource(id = R.drawable.bridge),
-        painterResource(id = R.drawable.city),
-        painterResource(id = R.drawable.deer),
-        painterResource(id = R.drawable.fog),
-        painterResource(id = R.drawable.forest),
-        painterResource(id = R.drawable.harbour),
-        painterResource(id = R.drawable.jungle),
-        painterResource(id = R.drawable.library),
-        painterResource(id = R.drawable.skyscraper),
-        painterResource(id = R.drawable.windows)
-    ).toTypedArray()
+    val artistNameList: List<String> = artworkModelList.map { stringResource(id = it.artistNameResourceId) }
+    val titleNameList: List<String> = artworkModelList.map { stringResource(id = it.artworkTitleResourceId) }
+    val dateList: List<String> = artworkModelList.map { stringResource(id = it.artworkDateResourceId) }
+    val descriptionList: List<String> = artworkModelList.map { stringResource(id = it.imageDescriptionResourceId) }
+    val imageList: List<Painter> = artworkModelList.map { painterResource(id = it.imageResourceId) }
+
 
     var indexStateVariable by remember {
         mutableIntStateOf(0)
